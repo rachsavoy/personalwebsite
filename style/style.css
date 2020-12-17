@@ -26,15 +26,18 @@ h1 {
   text-align: center;
   border-radius: 8px;
   float: left;
-  display: inline;
+  display: flex;
+  justify-content: space-around;
 }
 
-.card img {
+.card-img {
   display: flex;
   border-radius: 50%;
   width: 125px;
   float: left;
-  display: inline;
+  border: 2px;
+  padding: 8px;
+  justify-content: space-around;
 }
 
 

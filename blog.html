@@ -1,45 +1,21 @@
 <html>
 <head>
   <style>
-    .card {
-      width: auto;
-      margin: 16px;
-      padding: 8px;
-      text-align: center;
-      border-radius: 8px;
-      float: left;
-      display: flex;
-      box-shadow: 3px 5px #888888;
-      border: 4px;
-      border-radius: 8px;
-      background-color: white;
-      font-family: Dancing Script, cursive;
-      justify-content: center;
-      flex-direction: row;
+
+    section {
+      padding: 20px;
     }
 
-    .card:hover {
-      transform: scale(1.05);
-      box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+    h1 {
+      margin: 0 0 15px 0;
+      font-size: 28px;
+      font-weight: 700;
+      font-family: 'Poppins', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
     }
 
-    .card-title {
-      font-size: 30px;
-      font-weight: bold;
-      font-family: Dancing Script, cursive;
-    }
-
-    .card-text {
-      margin: 8px;
-      padding: 16px;
-    }
-
-    .card-img-top {
-      width: 200px;
-      border-radius: 8px;
-    }
-
-    #more {
+    .more {
       display: none;
     }
 
@@ -49,13 +25,20 @@
       outline: none;
       text-decoration: none;
       color: white;
-      font-size: 30px;
-      padding: 5px;
+      font-size: 20px;
+      padding: 8px 20px;
       border-radius: 8px;
-
+      display: block;
+      text-transform: capitalize;
+      margin-top: 15px;
+      cursor: pointer;
     }
 
-    .container {
+    .post:not(:last-child) {
+      margin-bottom: 30px;
+    }
+
+    .post {
       margin: 63px;
       padding-top: 24px;
       border: gray;
@@ -64,6 +47,9 @@
       padding: 24px;
       font-family: 'Fira Sans Extra Condensed', sans-serif;
       background-color: #e8e8e8;
+      font-size: 18px;
+      text-align: justify;
+      line-height: 18px;
     }
 
     .container :hover {
@@ -72,17 +58,22 @@
     }
 
   </style>
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed&display=swap" rel="stylesheet">
+  <script src="
+  https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed&display=swap" rel="stylesheet">
 </head>
 <body background-image: linear-gradient(white,rgba(0,0,0,0.3)),url("https://source.unsplash.com/Q7PclNhVRI0");">
-  <div class="container">
+  <section>
+    <div class="post">
       <h5 style="font-size: 32px">My jouney to tech 💻 </h5>
       <p style="font-size: 24px">Education is missing another teacher.</p>
 
-      <p>Eleven years ago, I started as a bright eyed ambitious first year teacher. Everyone really has you thinking that you are going to change the world in your classroom, 'you are shaping the future leaders of America' they would say. I ate it up. I thought I was achieving something more.<span id="dots">
+      <p>Eleven years ago, I started as a bright eyed ambitious first year teacher. Everyone really has you thinking that you are going to change the world in your classroom, 'you are shaping the future leaders of America' they would say. I ate it up. I thought I was achieving something more.<span class="dots">...</span>
+        <span class="more">
         <br></br>
-      My dream of teaching was one that allowed me to focus on each individual child. Their needs academically, socially, and emotionally. I would have time to really get to know the children in my classroom. This dream was not one that was dreamt up in my mind. I was taught this throughout my four years of college and then shown this at each internship.
-      <br></br>
+        My dream of teaching was one that allowed me to focus on each individual child. Their needs academically, socially, and emotionally. I would have time to really get to know the children in my classroom. This dream was not one that was dreamt up in my mind. I was taught this throughout my four years of college and then shown this at each internship.
+        <br></br>
         Starting out
         <br></br>
         In my first year I was at an amazing school with amazing colleagues but before the end of the year I was laid off because of budget cuts. They had no choice but to let me go even though I was named teacher of promise.  That was my wonderful introduction into the teaching world. I was able to get a job the next school year at another school but from then on I knew I had to do more than just be a teacher.
@@ -98,37 +89,34 @@
         <br></br>
         About three years ago, I finally came to the realization that I had to get out of public education. I didn’t know what I was going to do but I knew I had to make a change. I started doing some research into growing career fields. One of the largest growing career fields is technology. I began taking classes from a remote university for cyber security. I was taking two classes a semester while also teaching full time (with all those other responsibilities previously mentioned). Again, this was hard but I knew I had to make this change.
         <br></br>
-        The pandemic hit in March of last year. I began teaching online. Then I realized I shouldn’t be taking cyber security classes, I should be learning web development so I can make these online education programs that are being used today. I then began teaching my self how to code with any and every resource I could find online for free. In 2018, I became a military spouse and knew that we were going to have to move sometime in 2020. When I. Found out that it was to South Korea. I started researching coding bootcamps. I found Le Wagon.</span><span id="more"></span>
-      </p>
-      <button type="button" id="read" onclick="read()">Read More </button>
-      <script type="text/javascript">
-        var i=0;
-        function read(){
-          if(!i){
-            document.getElementById("more").style.display = "inline";
-            document.getElementById("dots").style.display = "none";
-            document.getElementById("read").innerHTML = "Read More";
-            i=1;
-          }
-          else {
-            document.getElementById("more").style.display = "none";
-            document.getElementById("dots").style.display = "inline";
-            document.getElementById("read").innerHTML = "Read Less";
-            i=0;
-          }
-        }
-      </script>
-
-</div>
-
-  <div class="card">
-    <div class="card-body">
-      <h5 class="card-title">How to never give up on happiness</h5>
-      <p class="card-text">Life isn't easy but if you keep working hard you will find your happiness.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-    <img class="card-img-top" src="images/blogpic2.jpg" alt="Card image cap">
+      The pandemic hit in March of last year. I began teaching online. Then I realized I shouldn’t be taking cyber security classes, I should be learning web development so I can make these online education programs that are being used today. I then began teaching my self how to code with any and every resource I could find online for free. In 2018, I became a military spouse and knew that we were going to have to move sometime in 2020. When I. Found out that it was to South Korea. I started researching coding bootcamps. I found Le Wagon.</span>
+    </p>
+    <button type="button" class="read">Read More </button>
   </div>
 
+  <div class="post">
+    <h5>How to never give up on happiness</h5>
+    <p>Life isn't easy but if you keep working hard you will find your <span class="dots">...</span>happiness.</p>
+      <span class="more">
+        <p> The pandemic hit in March of last year. I began teaching online. Then I realized I shouldn’t be taking cyber security classes, I should be learning web development so I can make these online education programs that are being used today. I then began teaching my self how to code with any and every resource I could find online for free. In 2018, I became a military spouse and knew that we were going to have to move sometime in 2020. When I. Found out that it was to South Korea. I started researching coding bootcamps. I found Le Wagon.</p>
+      </span>
+      <button type="button" class="read">Read More </button>
+    </div>
+  </section>
+  <script>
+   $(document).ready(function(){
+    $(".read").click(function(){
+      $(this).prev().toggle();
+      $(this).siblings('.dots').
+      toggle();
+      if($(this).text()=='read more'){
+        $(this).text('read less');
+      }
+      else{
+        $(this).text('read more');
+      }
+    });
+  });
+</script>
 </body>
 </html>

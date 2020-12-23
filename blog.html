@@ -14,7 +14,7 @@
       padding: 20px;
     }
 
-    h1 {
+    .box h1 {
       margin: 0 0 15px 0;
       font-size: 28px;
       font-weight: 700;
@@ -23,11 +23,18 @@
       letter-spacing: 1.2px;
     }
 
-    .more {
+    .box p {
+      font-size: 15px;
+      line-height: 28px;
+      height: 90px;
+      overflow: hidden;
+    }
+
+    #content {
       display: none;
     }
 
-    button {
+    .readmore-btn{
       background-color: #595b83;
       border: none;
       outline: none;
@@ -36,34 +43,44 @@
       font-size: 20px;
       padding: 8px 20px;
       border-radius: 8px;
-      display: block;
+      display: inline-block;
       text-transform: capitalize;
       margin-top: 15px;
       cursor: pointer;
     }
 
-    .post:not(:last-child) {
-      margin-bottom: 30px;
+    .readmore-btn a:hover {
+      box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+      color: white;
+      text-decoration: none;
     }
 
-    .post {
-      margin: 63px;
-      padding-top: 24px;
-      border: gray;
-      text-align: center;
-      border-style: inset;
-      padding: 24px;
-      font-family: 'Fira Sans Extra Condensed', sans-serif;
-      background-color: #e8e8e8;
-      font-size: 18px;
-      text-align: justify;
-      line-height: 18px;
+    .box {
+      width: 100%;
+      float: left;
+      margin: 50px 20px;
+      background-color: #fff;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 5px 5px rgba(0,0,0,0.15);
+
     }
 
-    .post :hover {
-      transform: scale(1.05);
-      box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+    .box.showContent p{
+      height: auto;
     }
+
+    .box.showContent a.readmore-btn{
+      background-color: black;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      height: 100px;
+    }
+
     #navbarNav {
       justify-content: space-around;
     }
@@ -114,11 +131,7 @@
       opacity: 1;
     }
 
-
   </style>
-  <script src="
-  https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js">
-</script>
 <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed&display=swap" rel="stylesheet">
 </head>
 <body bgcolor="#bbbfca">
@@ -146,18 +159,17 @@
       </div>
     </nav>
     <section>
-      <div class="post">
+      <div class="box">
+        <img src="https://unsplash.com/photos/gySMaocSdqs" alt="dog on computer">
         <h1>My jouney to tech 💻 </h1>
         <p>Education is missing another teacher.</p>
 
-        <p>Eleven years ago, I started as a bright eyed ambitious first year teacher. Everyone really has you thinking that you are going to change the world in your classroom, 'you are shaping the future leaders of America' they would say. I ate it up. I thought I was achieving something more.<span class="dots">...</span>
-
+          <p>Eleven years ago, I started as a bright eyed ambitious first year teacher. Everyone really has you thinking that you are going to change the world in your classroom, 'you are shaping the future leaders of America' they would say. I ate it up. I thought I was achieving something more.
           <br></br>
           My dream of teaching was one that allowed me to focus on each individual child. Their needs academically, socially, and emotionally. I would have time to really get to know the children in my classroom. This dream was not one that was dreamt up in my mind. I was taught this throughout my four years of college and then shown this at each internship.
           <br></br>
-          Starting out
-          <br></br>
           In my first year I was at an amazing school with amazing colleagues but before the end of the year I was laid off because of budget cuts. They had no choice but to let me go even though I was named teacher of promise.  That was my wonderful introduction into the teaching world. I was able to get a job the next school year at another school but from then on I knew I had to do more than just be a teacher.
+          <br></br>
           In my second year of teaching, I began a Masters program at Texas State University. I went to school at night while continuing to teach and having a little one at home. It wasn’t easy but I was able to finish and earn my Master’s in Reading Education. Now equipped with a Bachelor’s and a Master’s I felt that I could really live that dream that I was taught all those years ago.
           <br></br>
           Each year that I taught after, I was asked to do more and more out of the classroom. I was looked upon to be a leader which was an amazing feeling but it also came at a cost. I was being taken away from my students in my classroom. I was expected my continue improving the students proficiency rates each year in Reading and Math but with more responsibilities outside of the classroom as ever before.
@@ -175,54 +187,53 @@
           I found Le Wagon. About two months later, I moved to Korea and while in quarantine with my family started the coding bootcamp at Le Wagon. Each week was full of learning and practicing coding. By the end, my brain had absorbed a ridiculous amount of knowledge. It hurt but my heart was happy. I had become a full stack web developer. I had developed some pretty great projects that I am super proud of.
           <br></br>
           I am now in pursuit of my first web development job. It has been a journey to get here but I am just getting started on this new path and it is looking great! I am so excited to get started creating projects and being apart of a team. I believe that my dedication and passion outweighs this temporary lack in experience. One thing that will never change with me is my passion, goals, and ambitions.
-          <span class="more"></span>
-        </p>
-        <button type="button" class="read">Read More </button>
-      </div>
+          </p>
+          <a href="javascript:void();" class="readmore-btn"> Read More</a>
 
-      <div class="post">
+
+        </div>
+
+      <div class="box">
+        <img src="https://unsplash.com/photos/eA2t5EvcxU4" alt="">
         <h1>Never Give Up</h1>
         <p>Life isn't easy</p>
-        <p> Every one has gone through struggle, pain, heartache in their lifetime. Not everyone knows how to deal with their struggle, pain, heartache…etc. The difference is how each person is able recover and continue on with their life.   Some people might argue how. How do you move on with your life when you have lost a loved one, been evicted, or lost their job?
-        <br></br>
-        When this happens to you, it is very easy to curl up in a ball, think to yourself that this type of thing only happens to you, and eat everything in sight. (Not saying that I haven’t done all of the above multiple times.) You can get caught in this pattern of a pity party. Have you ever met someone that always plays the victim? Do you want to be that person?
-        <br></br>
-        You need to take an outside perspective on the matter. Are you really the only one this happens to? What have other people done when faced with this same obstacle? In the day and time that we live in I even bet you can find someone that has gone through the exact same situation on social media talking about what happened to them and how they got past it.
-        <br></br>
-        Another thing I also realized is that if you do not allow your self to move on then you won’t. You have to give yourself permission to move forward, to never give up. Each situation is different but you have to realize this is life, it is not easy and you can not give up on what you want in this life. You only get one! Use your time wisely. Think about the things that are really important to you. You might need to make adjustments in your life or add new routines.
-        <br></br>
-        You really have to take on each obstacle in your life like a challenge. You can’t let it beat you. Never give up!
-         <span class="dots">...</span>
-         <span class="more"></span>
-       </p>
-       <button type="button" class="read">Read More </button>
-     </div>
-   </section>
-   <script>
-     $(document).ready(function(){
-      $(".read").click(function(){
-        $(this).prev().toggle();
-        $(this).siblings('.dots').
-        toggle();
-        if($(this).text()=='read more'){
-          $(this).text('read less');
-        }
-        else{
-          $(this).text('read more');
-        }
-      });
-    });
-  </script>
-  <div class="footer mt-5 vw-100">
-    <div class="footer-links">
-      <a href="https://www.github.com/rachsavoy"><i class="fab fa-github"></i></a>
-      <a href="https://www.facebook.com/rachael.savoy.7"><i class="fab fa-facebook"></i></a>
-      <a href="https://twitter.com/savoy_rachael"><i class="fab fa-twitter"></i></a>
-      <a href="https://www.linkedin.com/in/rachaelsavoy/"><i class="fab fa-linkedin"></i></a>
+
+          <p> Every one has gone through struggle, pain, heartache in their lifetime. Not everyone knows how to deal with their struggle, pain, heartache…etc. The difference is how each person is able recover and continue on with their life.   Some people might argue how. How do you move on with your life when you have lost a loved one, been evicted, or lost their job?
+          <br></br>
+          When this happens to you, it is very easy to curl up in a ball, think to yourself that this type of thing only happens to you, and eat everything in sight. (Not saying that I haven’t done all of the above multiple times.) You can get caught in this pattern of a pity party. Have you ever met someone that always plays the victim? Do you want to be that person?
+          <br></br>
+          You need to take an outside perspective on the matter. Are you really the only one this happens to? What have other people done when faced with this same obstacle? In the day and time that we live in I even bet you can find someone that has gone through the exact same situation on social media talking about what happened to them and how they got past it.
+          <br></br>
+          Another thing I also realized is that if you do not allow your self to move on then you won’t. You have to give yourself permission to move forward, to never give up. Each situation is different but you have to realize this is life, it is not easy and you can not give up on what you want in this life. You only get one! Use your time wisely. Think about the things that are really important to you. You might need to make adjustments in your life or add new routines.
+          <br></br>
+          You really have to take on each obstacle in your life like a challenge. You can’t let it beat you. Never give up!
+          </p>
+          <a href="javascript:void();" class="readmore-btn"> Read More</a>
+        </div>
+    </section>
+    <div class="footer mt-5 vw-100">
+      <div class="footer-links">
+        <a href="https://www.github.com/rachsavoy"><i class="fab fa-github"></i></a>
+        <a href="https://www.facebook.com/rachael.savoy.7"><i class="fab fa-facebook"></i></a>
+        <a href="https://twitter.com/savoy_rachael"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.linkedin.com/in/rachaelsavoy/"><i class="fab fa-linkedin"></i></a>
+      </div>
     </div>
-  </div>
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-</body>
-</html>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+    <script>
+    $(".readmore-btn").on('click',function(){
+        $(this).parent().toggleClass("showContent");
+
+        var replaceText = $(this).parent().hasClass("showContent") ? "Read Less" : "Read More";
+        $(this).text(replaceText);
+    });
+
+
+    </script>
+  </body>
+  </html>
+
